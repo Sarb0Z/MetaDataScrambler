@@ -1,0 +1,34 @@
+public class MediaScramblerWorker extends Worker {
+    public MediaScramblerWorker(@NonNull Context context, @NonNull WorkerParameters workerParams) {
+        super(context, workerParams);
+    }
+
+    @NonNull
+    @Override
+    public Result doWork() {
+        // Implement file organization logic
+        organizeMediaFiles();
+        return Result.success();
+    }
+
+    private void organizeMediaFiles() {
+        // TODO: Implement logic to iterate through media files and remove geotagging data
+        // Use Metadata-Extractor library or other suitable libraries for working with image metadata
+
+        // Example:
+        // File[] mediaFiles = getMediaFiles();
+        // for (File mediaFile : mediaFiles) {
+        //     removeGeotaggingData(mediaFile);
+        // }
+    }
+
+    private void removeGeotaggingData(File mediaFile) {
+        // TODO: Implement logic to remove geotagging data from the media file
+        // Use Metadata-Extractor library or other suitable libraries for working with image metadata
+    }
+
+    // TODO: Implement logic to get a list of media files from the device
+    // private File[] getMediaFiles() {
+    //     ...
+    // }
+}
